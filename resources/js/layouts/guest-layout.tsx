@@ -1,5 +1,5 @@
 import {ReactNode} from "react";
-import gradientBg from '../../images/gradient-2.png';
+import gradientBg from '@/images/gradient-2.png';
 import Header from "@/layouts/guest/header";
 import Footer from "@/layouts/guest/footer";
 

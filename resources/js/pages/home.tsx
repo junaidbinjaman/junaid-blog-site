@@ -5,6 +5,7 @@ import {Head, Link, usePage} from '@inertiajs/react';
 import GuestLayout from "@/layouts/guest-layout";
 import Intro from "@/components/intro";
 import WorkExperiment from "@/components/work-experiment";
+import Expertise from "@/components/Expertise";
 
 // Icons
 import { FaLinkedinIn, FaGithub, FaInstagram, FaFacebookF } from "react-icons/fa6";
@@ -17,6 +18,12 @@ import goodLifeLogo from '../images/good-life-logo.jpg';
 import drDaleWellNess from '../images/dr-dale-wellness-logo.jpg';
 import northAmericanDiagnostic from '../images/north-american-diagnostic.jpg';
 import allNextVerLogo from '../images/all-next-ver-logo.jpg';
+import reactLogo from '../images/react-experties-logo.jpg';
+import wordpressLogo from '../images/wordpress-experties-logo.jpg';
+import laravelLogo from '../images/laravel-experties-logo.jpg';
+import figmaLogo from '../images/figma.svg';
+import phpLogo from '../images/php-experties-logo.jpg';
+import javascriptLogo from '../images/javascript-experties-logo.jpg';
 
 export default function Home() {
     const {auth} = usePage<SharedData>().props;
@@ -80,60 +87,17 @@ export default function Home() {
                     />
 
                     {/* Expertise */}
-                    <div className="rounded-2xl bg-white p-6 shadow dark:bg-black dark:shadow-dark">
-                        <h3 className="text-2xl font-semibold dark:text-light">My Expert Area</h3>
-
-                        <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3">
-                            <div className="text-center">
-                                <div className="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
-                                    <img src="assets/img/figma.svg" alt="" className="h-8 w-8"/>
-                                </div>
-                                <p className="mt-1 text-base font-medium text-dark dark:text-light/70">
-                                    Figma
-                                </p>
-                            </div>
-                            <div className="text-center">
-                                <div className="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
-                                    <img src="assets/img/notion.svg" alt="" className="h-8 w-8"/>
-                                </div>
-                                <p className="mt-1 text-base font-medium text-dark dark:text-light/70">
-                                    Notion
-                                </p>
-                            </div>
-                            <div className="text-center">
-                                <div className="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
-                                    <img src="assets/img/mico.svg" alt="" className="h-8 w-8"/>
-                                </div>
-                                <p className="mt-1 text-base font-medium text-dark dark:text-light/70">
-                                    Mico
-                                </p>
-                            </div>
-                            <div className="text-center">
-                                <div className="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
-                                    <img src="assets/img/framer.svg" alt="" className="h-8 w-8"/>
-                                </div>
-                                <p className="mt-1 text-base font-medium text-dark dark:text-light/70">
-                                    Framer
-                                </p>
-                            </div>
-                            <div className="text-center">
-                                <div className="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
-                                    <img src="assets/img/webflow.svg" alt="" className="h-8 w-8"/>
-                                </div>
-                                <p className="mt-1 text-base font-medium text-dark dark:text-light/70">
-                                    Webflow
-                                </p>
-                            </div>
-                            <div className="text-center">
-                                <div className="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
-                                    <img src="assets/img/zeplin.svg" alt="" className="h-8 w-8"/>
-                                </div>
-                                <p className="mt-1 text-base font-medium text-dark dark:text-light/70">
-                                    Zeplin
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    <Expertise
+                        section_title="My Expert Area"
+                        expertiseData={[
+                            {title: "React Native", logo: reactLogo},
+                            {title: "WordPress", logo: wordpressLogo},
+                            {title: "Laravel", logo: laravelLogo},
+                            {title: "Figma", logo: figmaLogo},
+                            {title: "PHP", logo: phpLogo},
+                            {title: "JavaScript", logo: javascriptLogo},
+                        ]}
+                    />
                 </div>
 
                 {/* Projects */}

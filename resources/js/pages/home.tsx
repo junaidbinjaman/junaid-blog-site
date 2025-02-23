@@ -5,10 +5,11 @@ import {Head, Link, usePage} from '@inertiajs/react';
 import GuestLayout from "@/layouts/guest-layout";
 import Intro from "@/components/intro";
 import WorkExperiment from "@/components/work-experiment";
-import Expertise from "@/components/Expertise";
+import Expertise from "@/components/expertise";
+import ProjectBox, {type ProjectBoxProps} from "@/components/project-box";
 
 // Icons
-import { FaLinkedinIn, FaGithub, FaInstagram, FaFacebookF } from "react-icons/fa6";
+import {FaLinkedinIn, FaGithub, FaInstagram, FaFacebookF, FaArrowRightLong} from "react-icons/fa6";
 
 // Images
 import junaidProfilePic from '../images/junaidbinjaman-profile-pic.jpg';
@@ -24,9 +25,16 @@ import laravelLogo from '../images/laravel-experties-logo.jpg';
 import figmaLogo from '../images/figma.svg';
 import phpLogo from '../images/php-experties-logo.jpg';
 import javascriptLogo from '../images/javascript-experties-logo.jpg';
+import project1 from '../images/project-1.png';
+import project2 from '../images/project-2.png';
+import {useState} from "react";
 
 export default function Home() {
     const {auth} = usePage<SharedData>().props;
+    const [projects, setProjects] = useState<ProjectBoxProps[]>([
+        {label: "Product Design", link: "https://allnextver.allnextver.store/", thumbnail: project1},
+        {label: "Product Design", link: "https://allnextver.allnextver.store/", thumbnail: project2},
+    ])
 
     return (
 
@@ -77,12 +85,42 @@ export default function Home() {
                     <WorkExperiment
                         section_title="Work Experience"
                         experienceData={[
-                            {years: "2018 - 2020", company: "eCommerce.care", role: "Junior Wordpress Developer", logo: ecommerceCare},
-                            {years: "2020 - 2022", company: "NAD", role: "Frontend Developer", logo: northAmericanDiagnostic},
-                            {years: "2021 - 2022", company: "Good Life Medicine", role: "Frontend Developer", logo: goodLifeLogo},
-                            {years: "2022 - 2024", company: "Reality Capture NetWork", role: "Fullstack Developer", logo: rcnLogo},
-                            {years: "2024 - 2025", company: "Dr Dale Wellness", role: "Fullstack WP Dev", logo: drDaleWellNess},
-                            {years: "2024 - Pres", company: "All Next Ver", role: "Web & Mobile App Dev", logo: allNextVerLogo}
+                            {
+                                years: "2018 - 2020",
+                                company: "eCommerce.care",
+                                role: "Junior Wordpress Developer",
+                                logo: ecommerceCare
+                            },
+                            {
+                                years: "2020 - 2022",
+                                company: "NAD",
+                                role: "Frontend Developer",
+                                logo: northAmericanDiagnostic
+                            },
+                            {
+                                years: "2021 - 2022",
+                                company: "Good Life Medicine",
+                                role: "Frontend Developer",
+                                logo: goodLifeLogo
+                            },
+                            {
+                                years: "2022 - 2024",
+                                company: "Reality Capture NetWork",
+                                role: "Fullstack Developer",
+                                logo: rcnLogo
+                            },
+                            {
+                                years: "2024 - 2025",
+                                company: "Dr Dale Wellness",
+                                role: "Fullstack WP Dev",
+                                logo: drDaleWellNess
+                            },
+                            {
+                                years: "2024 - Pres",
+                                company: "All Next Ver",
+                                role: "Web & Mobile App Dev",
+                                logo: allNextVerLogo
+                            }
                         ]}
                     />
 
@@ -104,66 +142,23 @@ export default function Home() {
                 <div className="rounded-2xl bg-white p-6 shadow dark:bg-black dark:shadow-dark">
                     <div className="flex flex-wrap items-center justify-between gap-2">
                         <h3 className="text-2xl font-semibold dark:text-light">Recent Projects</h3>
-                        <a href="portfolio.html"
+                        <Link href="/works"
                            className="inline-flex items-center justify-center gap-2 border-b text-center text-base text-primary transition hover:border-b-primary dark:border-b-muted dark:hover:border-b-primary">
                             <span>All Projects</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"
-                                 stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                 className="h-5 w-5">
-                                <path d="M4.167 10h11.666m-4.999 5 5-5m-5-5 5 5"/>
-                            </svg>
-                        </a>
+                            <FaArrowRightLong/>
+                        </Link>
                     </div>
 
                     <div className="mt-6 space-y-6">
-                        <div
-                            className="group relative overflow-hidden rounded-lg bg-light p-4 pb-0 dark:bg-dark-2 md:p-6 md:pb-0">
-                            <div className="relative aspect-6/4 overflow-hidden rounded-t-lg">
-                                <img src="assets/img/project-1.png" alt=""
-                                     className="h-full w-full rounded-t-lg object-cover object-top transition"/>
-
-                                <a href="assets/img/project-1.png" data-gall="project-gallry-1"
-                                   className="project-gallery-link absolute left-1/2 top-1/2 grid h-10 w-10 -translate-x-1/2 -translate-y-1/2 place-content-center rounded-full bg-white text-primary shadow-lg transition lg:invisible lg:-translate-y-[40%] lg:opacity-0 lg:group-hover:visible lg:group-hover:-translate-y-1/2 lg:group-hover:opacity-100">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"
-                                         stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                         stroke-width="1.5" className="h-6 w-6">
-                                        <path d="M10 4.167v11.666M4.167 10h11.666"/>
-                                    </svg>
-                                </a>
-                            </div>
-
-                            <div
-                                className="absolute inset-x-0 bottom-0 flex flex-wrap gap-2 bg-gradient-to-t from-black/20 p-4">
-                            <span
-                                className="rounded bg-white px-2 py-1 text-xs font-medium text-primary shadow">
-									Product Design
-								</span>
-                            </div>
-                        </div>
-                        <div
-                            className="group relative overflow-hidden rounded-lg bg-light p-4 pb-0 dark:bg-dark-2 md:p-6 md:pb-0">
-                            <div className="relative aspect-6/4 overflow-hidden rounded-t-lg">
-                                <img src="assets/img/project-2.png" alt=""
-                                     className="h-full w-full rounded-t-lg object-cover object-top transition"/>
-
-                                <a href="assets/img/project-2.png" data-gall="project-gallry-2"
-                                   className="project-gallery-link absolute left-1/2 top-1/2 grid h-10 w-10 -translate-x-1/2 -translate-y-1/2 place-content-center rounded-full bg-white text-primary shadow-lg transition lg:invisible lg:-translate-y-[40%] lg:opacity-0 lg:group-hover:visible lg:group-hover:-translate-y-1/2 lg:group-hover:opacity-100">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"
-                                         stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                         stroke-width="1.5" className="h-6 w-6">
-                                        <path d="M10 4.167v11.666M4.167 10h11.666"/>
-                                    </svg>
-                                </a>
-                            </div>
-
-                            <div
-                                className="absolute inset-x-0 bottom-0 flex flex-wrap gap-2 bg-gradient-to-t from-black/20 p-4">
-                            <span
-                                className="rounded bg-white px-2 py-1 text-xs font-medium text-primary shadow">
-									Product Design
-								</span>
-                            </div>
-                        </div>
+                        {
+                            projects.map(project => (
+                                <ProjectBox
+                                    thumbnail={project.thumbnail}
+                                    label={project.label}
+                                    link={project.link}
+                                />
+                            ))
+                        }
                     </div>
                 </div>
 

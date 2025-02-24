@@ -32,7 +32,7 @@ export default function WorkExperiment({section_title, experienceData}: Props) {
                                         <div className="flex items-center gap-3">
                                             <div
                                                 className="grid h-8 w-8 shrink-0 place-content-center rounded-lg bg-light dark:bg-dark-2">
-                                                <img src={element.logo} alt={element.company} className="h-5 w-5"/>
+                                                <img src={element.logo} alt={element.company} className="h-5 w-5 rounded-sm"/>
                                             </div>
                                             <div className="">
                                                 <h6 className="text-base font-semibold text-dark dark:text-light/70">
@@ -46,7 +46,6 @@ export default function WorkExperiment({section_title, experienceData}: Props) {
                                     </div>
                                 ))
                             }
-
                         </div>
                     </div>
                 </div>

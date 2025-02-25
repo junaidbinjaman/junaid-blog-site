@@ -1,4 +1,4 @@
-import React, {type PropsWithChildren, type ReactElement, ReactNode, useState} from 'react';
+import React, {type PropsWithChildren, type ReactElement, ReactNode, useEffect, useState} from 'react';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 type Props = PropsWithChildren<{
@@ -8,7 +8,6 @@ type Props = PropsWithChildren<{
     phoneNumber: number | string;
     email: string;
     socialMedia: SocialMediaLink[];
-
 }>
 
 type SocialMediaLink = {
@@ -17,13 +16,13 @@ type SocialMediaLink = {
 };
 
 export default function Intro({name, description, phoneNumber, email, socialMedia, profile_pic_url}: Props) {
-    const [isCopied, setIsCopied] = useState(false);
+    const [isCopied, setIsCopied] = useState<boolean>(false);
 
-    const handleCopy = () => {
-        setIsCopied(true);
+    useEffect(() => {
+        navigator.clipboard.writeText('junaid@allnextver.com');
 
-        setTimeout(() => setIsCopied(false), 2000);
-    }
+        setTimeout(() => setIsCopied(false), 1000);
+    }, [isCopied])
 
     return <div className="rounded-2xl bg-white p-6 shadow dark:bg-black dark:shadow-dark">
         <div className="aspect-6/4 overflow-hidden rounded-lg bg-light pt-4 text-center dark:bg-dark-2">
@@ -47,31 +46,24 @@ export default function Intro({name, description, phoneNumber, email, socialMedi
                     </svg>
                     <span>Book A Call</span>
                 </a>
-                {/*TODO: Implement the copy to clipboard function*/}
-                <CopyToClipboard
-                    text={email}
-                    onCopy={handleCopy}
-                >
-                    <button type="button" data-clipboard-text="shams.sujon.01@gmail.com"
-                            data-clipboard-action="copy" data-clipboard-success-text="Copied to clipboard"
-                            className="js-clipboard hs-tooltip inline-flex items-center gap-x-2 rounded-lg border border-light bg-transparent px-6 py-4 font-medium text-dark transition [--trigger:focus] hover:bg-light focus:outline-none focus:ring disabled:pointer-events-none disabled:opacity-50 dark:border-dark dark:text-light/70 dark:hover:bg-dark dark:hover:text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                             stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                             stroke-width="1.5" className="h-6 w-6">
-                            <path d="M8 10a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2v-8Z"/>
-                            <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/>
-                        </svg>
-                        <span>
-                            {isCopied ? "Copied" : "Copy Email"}
-                        </span>
+                <button
+                    onClick={() => setIsCopied(true)}
+                    type="button"
+                    className="js-clipboard hs-tooltip inline-flex items-center gap-x-2 rounded-lg border border-light bg-transparent px-6 py-4 font-medium text-dark transition [--trigger:focus] hover:bg-light focus:outline-none focus:ring disabled:pointer-events-none disabled:opacity-50 dark:border-dark dark:text-light/70 dark:hover:bg-dark dark:hover:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                         stroke-width="1.5" className="h-6 w-6">
+                        <path d="M8 10a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2v-8Z"/>
+                        <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/>
+                    </svg>
+                    <span>{isCopied ? "Copied.." : "Copy Email"}</span>
 
-                        <span
-                            className="hs-tooltip-content invisible z-10 hidden rounded-lg bg-gray-900 px-2 py-1 text-xs font-medium text-white opacity-1 shadow-sm transition-opacity hs-tooltip-shown:visible hs-tooltip-shown:opacity-100 dark:bg-slate-700"
-                            role="tooltip">
+                    <span
+                        className="hs-tooltip-content invisible z-10 hidden rounded-lg bg-gray-900 px-2 py-1 text-xs font-medium text-white opacity-1 shadow-sm transition-opacity hs-tooltip-shown:visible hs-tooltip-shown:opacity-100 dark:bg-slate-700"
+                        role="tooltip">
                         Copied to clipboard
                     </span>
-                    </button>
-                </CopyToClipboard>
+                </button>
             </div>
 
             {/* Social */}

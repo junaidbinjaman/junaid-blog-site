@@ -39,7 +39,6 @@ export default function Home() {
         {label: "Product Design", link: "https://allnextver.allnextver.store/", thumbnail: project2},
     ])
 
-    // @ts-ignore
     return (
 
         <GuestLayout>

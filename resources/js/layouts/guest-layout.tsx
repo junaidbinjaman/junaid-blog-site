@@ -5,7 +5,7 @@ import Footer from "@/layouts/guest/footer";
 
 export default function GuestLayout({children}: { children: ReactNode }) {
     return (
-        <div className={`flex flex-col h-screen bg-fixed bg-center bg-no-repeat bg-cover p-6`}
+        <div className={`flex flex-col min-h-screen bg-fixed bg-center bg-no-repeat bg-cover p-6`}
              style={{backgroundImage: `url(${gradientBg})`}}>
             <Header />
             <main className='flex-1'>

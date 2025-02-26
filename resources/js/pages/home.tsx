@@ -32,6 +32,7 @@ import phpLogo from '../images/php-experties-logo.jpg';
 import javascriptLogo from '../images/javascript-experties-logo.jpg';
 import project1 from '../images/project-1.png';
 import project2 from '../images/project-2.png';
+import IntroSection from "@/components/introSection";
 
 export default function Home() {
     const [projects, setProjects] = useState<ProjectBoxProps[]>([
@@ -48,40 +49,7 @@ export default function Home() {
             </Head>
             <main className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-6 lg:w-[1272px] mx-auto mt-6">
                 {/* Intro */}
-                <Intro
-                    profile_pic_url={junaidProfilePic}
-                    name="Junaid Bin Jaman"
-                    description={
-                        <>
-                            <p>
-                                Seven years of experience engineering dynamic front-ends with <strong>React/React
-                                Native</strong> powerful back-ends with <strong>Laravel</strong>.
-                            </p>
-                            <br/>
-                            <p>
-                                Expert in extending WordPress functionality through custom <strong>plugin
-                                development.</strong>
-                            </p>
-                        </>
-                    }
-                    phoneNumber="+8801705294083"
-                    email="junaid@allnextver.com"
-                    socialMedia={[
-                        {
-                            icon: <FaLinkedinIn size={24}/>,
-                            profileUrl: 'https://www.linkedin.com/in/junaidbinjaman/'
-                        },
-                        {icon: <FaGithub size={24}/>, profileUrl: 'https://github.com/junaidbinjaman'},
-                        {
-                            icon: <FaInstagram size={24}/>,
-                            profileUrl: 'https://www.instagram.com/junaidbinjaman/'
-                        },
-                        {
-                            icon: <FaFacebookF size={24}/>,
-                            profileUrl: 'https://www.facebook.com/junaidbinjaman/'
-                        },
-                    ]}
-                />
+                <IntroSection />
 
                 <div className="grid grid-cols-1 gap-4 lg:gap-6">
                     {/* Work Experience */}

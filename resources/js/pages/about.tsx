@@ -10,37 +10,14 @@ import {
 
 // components
 import GuestLayout from "@/layouts/guest-layout";
-import Intro from "@/components/intro";
-import BrandLogo from "@/components/brandLogo";
-import TestimonialBox from "@/components/testimonialBox";
-import AwardBox from "@/components/awardBox";
 import PostBox from "@/components/postBox";
-
-// icons
-import {FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn} from "react-icons/fa6";
+import IntroSection from "@/components/introSection";
+import BrandSection from "@/components/brandSection";
+import TestimonialSection from "@/components/testimonialSection";
+import AwardSection from "@/components/awardSection";
 
 // images
-import junaidProfilePic from "@/images/junaidbinjaman-profile-pic.jpg";
 import circleText from "../images/circle-text.svg";
-import androidBrandLogo from "../images/logos/brand/android-brand-logo.png";
-import clickUpBrandLogo from "../images/logos/brand/clickup-brand-logo.png";
-import awsBrandLogo from "../images/logos/brand/aws-brand-logo.png";
-import figmaBrandLogo from "../images/logos/brand/figma-brand-logo.png";
-import iosBrandLogo from "../images/logos/brand/ios-brand-logo.png";
-import javascriptBrandLogo from "../images/logos/brand/javascript-brand-logo.png";
-import jQueryBrandLogo from "../images/logos/brand/jquery-brand-logo.png";
-import laravelBrandLogo from "../images/logos/brand/laravel-brand-logo.png";
-import mySqlBrandLogo from "../images/logos/brand/mysql-brand-logo.png";
-import phpBrandLogo from "../images/logos/brand/php-brand-logo.png";
-import phpstormBrandLogo from "../images/logos/brand/phpstorm-brand-logo.png";
-import reactBrandLogo from "../images/logos/brand/react-brand-logo.png";
-import tailwindcssBrandLogo from "../images/logos/brand/tailwindcss-brand-logo.png";
-import woocommerceBrandLogo from "../images/logos/brand/woo-brand-logo.png";
-import wordpressBrandLogo from "../images/logos/brand/wordpress-brand-logo.png";
-import tsBrandLogo from "../images/logos/brand/ts-brand-logo.png";
-import pullShark from "../images/pull-shark-github.png";
-import yolo from "../images/yolo-github.png";
-import quickDraw from "../images/quickdraw-github.png";
 import blogThumbnail1 from "../images/blog-img-1.jpg";
 import blogThumbnail2 from "../images/blog-img-2.jpg";
 import blogThumbnail3 from "../images/blog-img-3.jpg";
@@ -51,41 +28,8 @@ export default function About() {
         <Head title="About Me"/>
         <main className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-6n lg:w-[1272px] mx-auto mt-6">
             {/* Intro */}
-            <div className="">
-                <Intro
-                    profile_pic_url={junaidProfilePic}
-                    name="Junaid Bin Jaman"
-                    description={
-                        <>
-                            <p>
-                                Seven years of experience engineering dynamic front-ends with <strong>React/React
-                                Native</strong> powerful back-ends with <strong>Laravel</strong>.
-                            </p>
-                            <br/>
-                            <p>
-                                Expert in extending WordPress functionality through custom <strong>plugin
-                                development.</strong>
-                            </p>
-                        </>
-                    }
-                    phoneNumber="+8801705294083"
-                    email="junaid@allnextver.com"
-                    socialMedia={[
-                        {
-                            icon: <FaLinkedinIn size={24}/>,
-                            profileUrl: 'https://www.linkedin.com/in/junaidbinjaman/'
-                        },
-                        {icon: <FaGithub size={24}/>, profileUrl: 'https://github.com/junaidbinjaman'},
-                        {
-                            icon: <FaInstagram size={24}/>,
-                            profileUrl: 'https://www.instagram.com/junaidbinjaman/'
-                        },
-                        {
-                            icon: <FaFacebookF size={24}/>,
-                            profileUrl: 'https://www.facebook.com/junaidbinjaman/'
-                        },
-                    ]}
-                />
+            <div>
+                <IntroSection />
             </div>
 
             {/* about */}
@@ -93,7 +37,7 @@ export default function About() {
                 <div className="flex flex-col-reverse items-start gap-6 lg:flex-row lg:gap-10">
                     <div className="">
                         <h2 className="text-3xl font-semibold text-dark dark:text-light lg:text-[40px]">
-                            Hi, This Is <span className="text-primary">Junaid</span> 👋
+                            Hi, This is <span className="text-primary">Junaid</span> 👋
                         </h2>
                         <p className="mt-4 text-lg text-muted dark:text-light/70 lg:mt-6 lg:text-2xl">
                             A Passionate
@@ -161,144 +105,13 @@ export default function About() {
                 </div>
 
                 {/* Brands */}
-                <div className="mt-10 lg:mt-14">
-                    <h3 className="text-2xl font-medium text-dark dark:text-light lg:text-3xl">
-                        Working With 50+ Brands ✨ Worldwide
-                    </h3>
-                    <div
-                        className="mt-8 grid grid-cols-[repeat(auto-fit,_minmax(60px,1fr))] gap-2 lg:grid-cols-[repeat(auto-fit,_minmax(80px,1fr))] lg:gap-4">
-                        <BrandLogo logoSrc={reactBrandLogo} alt="The react logo"/>
-                        <BrandLogo logoSrc={wordpressBrandLogo} alt="The wordpress logo"/>
-                        <BrandLogo logoSrc={laravelBrandLogo} alt="The laravel logo"/>
-                        <BrandLogo logoSrc={tsBrandLogo} alt="The ts logo"/>
-                        <BrandLogo logoSrc={tailwindcssBrandLogo} alt="The tailwindcss logo"/>
-                        <BrandLogo logoSrc={jQueryBrandLogo} alt="The jQuery logo"/>
-                        <BrandLogo logoSrc={javascriptBrandLogo} alt="The javascript logo"/>
-                        <BrandLogo logoSrc={phpBrandLogo} alt="The php logo"/>
-                        <BrandLogo logoSrc={figmaBrandLogo} alt="The figma logo"/>
-                        <BrandLogo logoSrc={phpstormBrandLogo} alt="The phpstorm logo"/>
-                        <BrandLogo logoSrc={iosBrandLogo} alt="The ios logo"/>
-                        <BrandLogo logoSrc={androidBrandLogo} alt="The android logo"/>
-                        <BrandLogo logoSrc={mySqlBrandLogo} alt="The mysql logo"/>
-                        <BrandLogo logoSrc={woocommerceBrandLogo} alt="The woocommerce logo"/>
-                        <BrandLogo logoSrc={clickUpBrandLogo} alt="The clickup logo"/>
-                        <BrandLogo logoSrc={awsBrandLogo} alt="The aws logo"/>
-                    </div>
-                </div>
+                <BrandSection />
 
                 {/* Reviews */}
-                <div className="mt-10 lg:mt-20!">
-                    <Carousel>
-                        <div className="flex flex-wrap items-center justify-between gap-6">
-                            <h3 className="text-2xl font-medium text-dark dark:text-light lg:text-3xl">
-                                Trusted By 80+ Clients
-                            </h3>
-
-                            <div className="flex items-center gap-2">
-                                <CarouselPrevious
-                                    className="static grid h-9 w-9 place-content-center rounded-lg border border-muted/30 text-muted transition hover:border-primary hover:text-primary"/>
-                                <CarouselNext
-                                    className="static grid h-9 w-9 place-content-center rounded-lg border border-muted/30 text-muted transition hover:border-primary hover:text-primary"/>
-                            </div>
-                        </div>
-                        <div className="mt-8">
-
-                            <CarouselContent>
-                                <CarouselItem className="basis-1/2">
-                                    <TestimonialBox
-                                        ratings={2.7}
-                                        name="Bayazid Hasan"
-                                        href="https://allnextver.expert/"
-                                        jobTitle="Project Manager"
-                                        siteName="All Next Ver"
-                                        review="Partnering with Junaid has been a great decision for our agency. He not only delivers high-quality websites but also helps us refine ideas into practical solutions. His consistency and proactive communication make projects stress-free."
-                                    />
-                                </CarouselItem>
-                                <CarouselItem className="basis-1/2">
-                                    <TestimonialBox
-                                        ratings={4.9}
-                                        name="Becca Ralph"
-                                        href="https://rcnmedia.expert/"
-                                        jobTitle="Marketing Lead"
-                                        siteName="RCN"
-                                        review="Junaid played a key role in building our digital platforms. He’s fast, reliable, and deeply understands business needs. Our team values his input just as much as his technical execution."
-                                    />
-                                </CarouselItem>
-                                <CarouselItem className="basis-1/2">
-                                    <TestimonialBox
-                                        ratings={5}
-                                        name="Marcus Lee"
-                                        href="https://loopmedia.expert/"
-                                        jobTitle="CEO"
-                                        siteName="Loop Media"
-                                        review="We rely on Junaid for critical web development projects. He delivers on time, communicates clearly, and always brings innovative solutions."
-                                    />
-                                </CarouselItem>
-                                <CarouselItem className="basis-1/2">
-                                    <TestimonialBox
-                                        ratings={4.8}
-                                        name="Hannah Green"
-                                        href="https://brandhouse.expert/"
-                                        jobTitle="Creative Director"
-                                        siteName="Brand House"
-                                        review="Junaid is not just a developer, he’s a collaborator. He understood our vision quickly and delivered a product that matched our brand perfectly."
-                                    />
-                                </CarouselItem>
-                                <CarouselItem className="basis-1/2">
-                                    <TestimonialBox
-                                        ratings={5}
-                                        name="David Kim"
-                                        href="https://visionlab.expert/"
-                                        jobTitle="CTO"
-                                        siteName="Vision Lab"
-                                        review="From WordPress customization to React solutions, Junaid’s skillset covers it all. His code quality and professionalism stand out every time."
-                                    />
-                                </CarouselItem>
-                                <CarouselItem className="basis-1/2">
-                                    <TestimonialBox
-                                        ratings={4.9}
-                                        name="Sophia Ahmed"
-                                        href="https://creativepulse.expert/"
-                                        jobTitle="Product Manager"
-                                        siteName="Creative Pulse"
-                                        review="We asked Junaid to develop a mobile app for our internal workflow, and the results were outstanding. Smooth performance, clean UI, and reliable support throughout the process. Our team efficiency has improved significantly."
-                                    />
-                                </CarouselItem>
-                            </CarouselContent>
-                        </div>
-                    </Carousel>
-                </div>
+                <TestimonialSection />
 
                 {/* Awards */}
-                <div className="mt-10 lg:mt-14">
-                    <h3 className="text-2xl font-medium text-dark dark:text-light lg:text-3xl">
-                        Awards and Recognitions
-                    </h3>
-
-                    <div className="mt-8 space-y-4">
-                        <AwardBox
-                            thumbnail={pullShark}
-                            label="2nd pull request merged"
-                            year="2023"
-                            category="Pull Shark"
-                            href="https://github.com/junaidbinjaman?achievement=pull-shark&tab=achievements"
-                        />
-                        <AwardBox
-                            thumbnail={yolo}
-                            label="You want it? You merge it. Merged without a review"
-                            year="2021"
-                            category="YOLO"
-                            href="https://github.com/junaidbinjaman?achievement=quickdraw&tab=achievements"
-                        />
-                        <AwardBox
-                            thumbnail={quickDraw}
-                            label="Closed within 5 minutes of opening"
-                            year="2019"
-                            category="Gitty up!"
-                            href="https://github.com/junaidbinjaman?achievement=quickdraw&tab=achievements"
-                        />
-                    </div>
-                </div>
+                <AwardSection />
 
                 {/* Blog */}
                 <Carousel>

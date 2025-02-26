@@ -139,3 +139,19 @@
         @apply bg-background text-foreground;
     }
 }
+
+.accordingPlusIcons, .accordingMinusIcons {
+    transition: transform 300ms;
+}
+
+.accordingMinusIcons {
+    display: block;
+}
+
+.AccordionTrigger[data-state="open"] .accordingPlusIcons {
+    display: none !important;
+}
+
+.AccordionTrigger[data-state="closed"] .accordingMinusIcons {
+    display: none !important;
+}

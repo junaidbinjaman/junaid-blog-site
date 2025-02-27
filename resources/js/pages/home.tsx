@@ -15,6 +15,7 @@ import {IoIosDesktop} from "react-icons/io";
 import {CiMobile1} from "react-icons/ci";
 import {IoNewspaperOutline} from "react-icons/io5";
 import {BsPlugin} from "react-icons/bs";
+import IntroSection from "@/components/introSection";
 
 // Images
 import junaidProfilePic from '../images/junaidbinjaman-profile-pic.jpg';
@@ -32,7 +33,7 @@ import phpLogo from '../images/php-experties-logo.jpg';
 import javascriptLogo from '../images/javascript-experties-logo.jpg';
 import project1 from '../images/project-1.png';
 import project2 from '../images/project-2.png';
-import IntroSection from "@/components/introSection";
+
 
 export default function Home() {
     const [projects, setProjects] = useState<ProjectBoxProps[]>([

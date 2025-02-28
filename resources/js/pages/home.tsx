@@ -3,14 +3,13 @@ import {useState} from "react";
 
 // Components
 import GuestLayout from "@/layouts/guest-layout";
-import Intro from "@/components/intro";
 import WorkExperiment from "@/components/work-experiment";
 import Expertise from "@/components/expertise";
 import ProjectBox, {type ProjectBoxProps} from "@/components/project-box";
 import ServiceBox from "@/components/serviceBox";
 
 // Icons
-import {FaLinkedinIn, FaGithub, FaInstagram, FaFacebookF, FaArrowRightLong} from "react-icons/fa6";
+import {FaArrowRightLong} from "react-icons/fa6";
 import {IoIosDesktop} from "react-icons/io";
 import {CiMobile1} from "react-icons/ci";
 import {IoNewspaperOutline} from "react-icons/io5";
@@ -18,7 +17,6 @@ import {BsPlugin} from "react-icons/bs";
 import IntroSection from "@/components/introSection";
 
 // Images
-import junaidProfilePic from '../images/junaidbinjaman-profile-pic.jpg';
 import ecommerceCare from '../images/ecommerce_care_logo.webp';
 import rcnLogo from '../images/rcn-logo.jpg';
 import goodLifeLogo from '../images/good-life-logo.jpg';

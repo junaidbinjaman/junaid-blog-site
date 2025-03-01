@@ -18,11 +18,12 @@ type SocialMediaLink = {
 export default function Intro({name, description, phoneNumber, email, socialMedia, profile_pic_url}: Props) {
     const [isCopied, setIsCopied] = useState<boolean>(false);
 
-    useEffect(() => {
-        navigator.clipboard.writeText('junaid@allnextver.com');
+    const handleClick = () => {
+        navigator.clipboard.writeText('junaid@allnextcer.com');
+        setIsCopied(true);
 
         setTimeout(() => setIsCopied(false), 1000);
-    }, [isCopied])
+    }
 
     return <div className="rounded-2xl bg-white p-6 shadow dark:bg-black dark:shadow-dark">
         <div className="aspect-6/4 overflow-hidden rounded-lg bg-light pt-4 text-center dark:bg-dark-2">
@@ -47,7 +48,7 @@ export default function Intro({name, description, phoneNumber, email, socialMedi
                     <span>Book A Call</span>
                 </a>
                 <button
-                    onClick={() => setIsCopied(true)}
+                    onClick={handleClick}
                     type="button"
                     className="js-clipboard hs-tooltip inline-flex items-center gap-x-2 rounded-lg border border-light bg-transparent px-6 py-4 font-medium text-dark transition [--trigger:focus] hover:bg-light focus:outline-none focus:ring disabled:pointer-events-none disabled:opacity-50 dark:border-dark dark:text-light/70 dark:hover:bg-dark dark:hover:text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"

@@ -136,11 +136,11 @@ export default function Home() {
                 <div className="rounded-2xl bg-white p-6 shadow dark:bg-black dark:shadow-dark lg:col-span-2">
                     <div className="flex flex-wrap items-center justify-between gap-2">
                         <h3 className="text-2xl font-semibold dark:text-light">Services I Offered</h3>
-                        <a href="/services"
+                        <Link href="/services"
                            className="inline-flex items-center justify-center gap-2 border-b text-center text-base text-primary transition hover:border-b-primary dark:border-b-muted dark:hover:border-b-primary">
                             <span>See All Services</span>
                             <FaArrowRightLong/>
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="mt-6 grid grid-cols-2 gap-6 md:grid-cols-4">

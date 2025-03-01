@@ -1,7 +1,7 @@
 export default function () {
     return (
         <>
-            <footer className="text-center">
+            <footer className="text-center pt-10">
                 <p className="text-sm dark:text-light/70">
                     @ Dev Dive 2025, Design By&nbsp;
                     <a href="#"

@@ -11,17 +11,17 @@ export default function TestimonialSection() {
                         Trusted By 80+ Clients
                     </h3>
 
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 mt-10">
                         <CarouselPrevious
                             className="static grid h-9 w-9 place-content-center rounded-lg border border-muted/30 text-muted transition hover:border-primary hover:text-primary"/>
                         <CarouselNext
                             className="static grid h-9 w-9 place-content-center rounded-lg border border-muted/30 text-muted transition hover:border-primary hover:text-primary"/>
                     </div>
                 </div>
-                <div className="mt-8">
+                <div className="lg:mt-8">
 
                     <CarouselContent>
-                        <CarouselItem className="basis-1/2">
+                        <CarouselItem className="lg:basis-1/2">
                             <TestimonialBox
                                 ratings={2.7}
                                 name="Bayazid Hasan"
@@ -31,7 +31,7 @@ export default function TestimonialSection() {
                                 review="Partnering with Junaid has been a great decision for our agency. He not only delivers high-quality websites but also helps us refine ideas into practical solutions. His consistency and proactive communication make projects stress-free."
                             />
                         </CarouselItem>
-                        <CarouselItem className="basis-1/2">
+                        <CarouselItem className="lg:basis-1/2">
                             <TestimonialBox
                                 ratings={4.9}
                                 name="Becca Ralph"
@@ -41,7 +41,7 @@ export default function TestimonialSection() {
                                 review="Junaid played a key role in building our digital platforms. He’s fast, reliable, and deeply understands business needs. Our team values his input just as much as his technical execution."
                             />
                         </CarouselItem>
-                        <CarouselItem className="basis-1/2">
+                        <CarouselItem className="lg:basis-1/2">
                             <TestimonialBox
                                 ratings={5}
                                 name="Marcus Lee"
@@ -51,7 +51,7 @@ export default function TestimonialSection() {
                                 review="We rely on Junaid for critical web development projects. He delivers on time, communicates clearly, and always brings innovative solutions."
                             />
                         </CarouselItem>
-                        <CarouselItem className="basis-1/2">
+                        <CarouselItem className="lg:basis-1/2">
                             <TestimonialBox
                                 ratings={4.8}
                                 name="Hannah Green"
@@ -61,7 +61,7 @@ export default function TestimonialSection() {
                                 review="Junaid is not just a developer, he’s a collaborator. He understood our vision quickly and delivered a product that matched our brand perfectly."
                             />
                         </CarouselItem>
-                        <CarouselItem className="basis-1/2">
+                        <CarouselItem className="lg:basis-1/2">
                             <TestimonialBox
                                 ratings={5}
                                 name="David Kim"
@@ -71,7 +71,7 @@ export default function TestimonialSection() {
                                 review="From WordPress customization to React solutions, Junaid’s skillset covers it all. His code quality and professionalism stand out every time."
                             />
                         </CarouselItem>
-                        <CarouselItem className="basis-1/2">
+                        <CarouselItem className="lg:basis-1/2">
                             <TestimonialBox
                                 ratings={4.9}
                                 name="Sophia Ahmed"

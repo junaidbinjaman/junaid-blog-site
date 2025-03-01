@@ -122,7 +122,7 @@ export default function About() {
                                 Article and Publications
                             </h3>
 
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center gap-2 mt-8">
                                 <CarouselPrevious
                                     className="static blog-carousel-button-prev grid h-9 w-9 place-content-center rounded-lg border border-muted/30 text-muted transition hover:border-primary hover:text-primary"/>
                                 <CarouselNext
@@ -130,9 +130,9 @@ export default function About() {
                             </div>
                         </div>
 
-                        <div className="mt-8">
+                        <div className="lg:mt-8">
                             <CarouselContent>
-                                <CarouselItem className="basis-1/2">
+                                <CarouselItem className="lg:basis-1/2">
                                     <PostBox
                                         title="Want To Upgrade Your Brain? Stop Doing These7 Things"
                                         thumbnail={blogThumbnail1}
@@ -143,7 +143,7 @@ export default function About() {
                                         readTime="4 min read"
                                     />
                                 </CarouselItem>
-                                <CarouselItem className="basis-1/2">
+                                <CarouselItem className="lg:basis-1/2">
                                     <PostBox
                                         title="Want To Upgrade Your Brain? Stop Doing These7 Things"
                                         thumbnail={blogThumbnail2}
@@ -154,7 +154,7 @@ export default function About() {
                                         readTime="4 min read"
                                     />
                                 </CarouselItem>
-                                <CarouselItem className="basis-1/2">
+                                <CarouselItem className="lg:basis-1/2">
                                     <PostBox
                                         title="Want To Upgrade Your Brain? Stop Doing These7 Things"
                                         thumbnail={blogThumbnail3}
@@ -165,7 +165,7 @@ export default function About() {
                                         readTime="4 min read"
                                     />
                                 </CarouselItem>
-                                <CarouselItem className="basis-1/2">
+                                <CarouselItem className="lg:basis-1/2">
                                     <PostBox
                                         title="Want To Upgrade Your Brain? Stop Doing These7 Things"
                                         thumbnail={blogThumbnail4}

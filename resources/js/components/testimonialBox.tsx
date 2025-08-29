@@ -1,4 +1,3 @@
-import start from "../images/star-full.svg";
 import {TiStarFullOutline} from "react-icons/ti";
 import {TiStarHalfOutline} from "react-icons/ti";
 import { TiStarOutline } from "react-icons/ti";
